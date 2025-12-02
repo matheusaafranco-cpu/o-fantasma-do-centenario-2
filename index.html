@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O fantasma do Centenário</title>
+  <style>
+    :root {
+      --vermelho: #c80f2e;
+      --fundo: #0f0f12;
+      --texto: #f5f5f7;
+      --subtexto: #bfbfc5;
+      --card: #1a1a1f;
+      --borda: #2a2a31;
+      --accent: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.5;
+    }
+
+    /* Barra vermelha no topo */
+    .top-bar {
+      background: var(--vermelho);
+      height: 12px;
+      width: 100%;
+    }
+
+    /* Conteúdo */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Nome do filme */
+    .title {
+      margin: 20px 0 8px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      color: var(--subtexto);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    /* Cartaz */
+    .poster {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--borda);
+      display: block;
+    }
+
+    /* Seções */
+    section {
+      margin-top: 28px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* Lista de participantes */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .person-card {
+      background: var(--card);
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .person-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .person-info {
+      padding: 10px 12px;
+    }
+
+    .person-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .person-role {
+      color: var(--subtexto);
+      font-size: 0.85rem;
+    }
+
+    /* Link para o filme */
+    .cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card);
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .cta-text {
+      flex: 1;
+    }
+
+    .cta-button {
+      background: var(--vermelho);
+      color: var(--accent);
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform 0.08s ease, opacity 0.15s ease;
+      white-space: nowrap;
+    }
+    .cta-button:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    /* Rodapé opcional */
+    footer {
+      color: var(--subtexto);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra vermelha em cima de tudo -->
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Nome do filme -->
+    <h1 class="title">O fantasma do Centenário</h1>
+    <p class="subtitle">1º EET-ETEC PRESIDENTE VARGAS </p>
+
+    <!-- Cartaz do filme -->
+    <section aria-labelledby="cartaz-title">
+      <h1 id="cartaz-title" class="section-title">Cartaz</h1>
+      <!-- Substitua o src pela URL do cartaz -->
+      <img class="poster" src="cartas4.jpg" alt="Cartaz oficial do filme" />
+    </section>
+
+    <!-- Lista com fotos de cada pessoa que participou (8 pessoas) -->
+    <section aria-labelledby="participantes-title">
+      <h2 id="participantes-title" class="section-title">Participantes</h2>
+
+      <div class="grid">
+        <!-- Repita e personalize os 8 cards abaixo -->
+        <article class="person-card">
+          <img class="person-photo" src="jp.jpg" alt="Foto de Pessoa 1" />
+          <div class="person-info">
+            <div class="person-name">João Paulo </div>
+            <div class="person-role">João Paulo como João</div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="bernardo.jpg" alt="Foto de Pessoa 2" />
+          <div class="person-info">
+            <div class="person-name">Bernardo Cunda</div>
+            <div class="person-role">Roteirista e diretor</div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="joao.jpg" alt="Foto de Pessoa 3" />
+          <div class="person-info">
+            <div class="person-name">João Marcos</div>
+            <div class="person-role">João Marcos como Marcos </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="caique.jpg" alt="Foto de Pessoa 4" />
+          <div class="person-info">
+            <div class="person-name">Caique</div>
+            <div class="person-role">Caique Como Caique e figurinista  </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="gui.jpg" alt="Foto de Pessoa 5" />
+          <div class="person-info">
+            <div class="person-name">Guilherme</div>
+            <div class="person-role">Guilherme como Guilherme </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="enzo.jpg" alt="Foto de Pessoa 6" />
+          <div class="person-info">
+            <div class="person-name">Enzo</div>
+            <div class="person-role">Enzo como (Enzo)Professor De Física e fantasma</div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="eu.jpg" alt="Foto de Pessoa 7" />
+          <div class="person-info">
+            <div class="person-name">Matheus de almeida</div>
+            <div class="person-role">Montagem edição e camera</div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="bryan.jpg" alt="Foto de Pessoa 8" />
+          <div class="person-info">
+            <div class="person-name">bryan</div>
+            <div class="person-role"> editor</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Link para o filme -->
+    <section aria-labelledby="link-filme-title">
+      <h2 id="link-filme-title" class="section-title">Assista ao curta</h2>
+      <div class="cta">
+        <div class="cta-text">
+          <strong>Disponível no link do botão:</strong> Clique no botão para assistir o curta
+        </div>
+        <!-- Substitua o href pelo link real do filme -->
+        <a class="cta-button" href="https://youtu.be/weaOdhzJt2w?si=z5X5FPcvGzfQXyWv" target="_blank" rel="noopener">Assistir agora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 — O fantasma do Centenário 
+  </footer>
+</body>
+</html>
